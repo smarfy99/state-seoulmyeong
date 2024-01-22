@@ -4,6 +4,7 @@ import { create } from 'zustand';
 export const useTitleState = create((set) => ({
 	//set은 함수야
 	title: '제목없음', //상태
+
 	// setTitle: (inputTitle) => set(state => {
 	//     return {
 	//         ...state,
@@ -15,10 +16,11 @@ export const useTitleState = create((set) => ({
 			...state,
 			title: inputTitle,
 		})),
+
 	//자동으로 summit하면 input하면 지워주는애
 	reset: () =>
-		set((state) => ({
-			...state,
+		set(() => ({
+			// ...state,
 			title: '',
 		})),
 }));
